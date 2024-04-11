@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>bhc치킨</title>
+  <!-- 초기화 -->
+  <link rel="stylesheet" href="./css/reset.css" type="text/css">
+  <!-- 공통서식 -->
+  <link rel="stylesheet" href="./css/common.css" type="text/css">
+  <!-- 메인서식 -->
+  <link rel="stylesheet" href="./css/main.css" type="text/css">
+  <!--아이콘폰트 주소  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" type="text/css" >
+  <!-- 파비콘 이미지 -->
+  <link rel="shortcut icon" type="image/x-icon" href="./img/favicon.ico"> 
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+
+  <!--적응형 : 스크립트 쓰기! 사용자가 현재 페이지에 접속하면 접속한 디바이스 기기가 어떤 기기인지 체크하여 모바일, 테블릿일경우 각각 페이지로 이동하도록 한다 -->
+  <script>
+    //스마트폰 이름
+    let mobile_keys = new Array('iPhone','iPad','Android','BlackBerry','windowsPhone','window CE','LG','MOT','SAMSUNG','SonyErisson','Nokia') 
+    
+    //만약 웹페이지의 주소뒤에 move_pc_screen 값이 없다면
+    if(document.URL.match('move_pc_screen')) mobile_keys=null;
+    
+    //위 배열값 개수만큼 반복하여 검사를 하고 모바일 사용자이면 아래 내용을 실행한다.
+    //URL 파라미터에 'move_pc_screen'가 포함되어있을 때 아래내용을 적용한다
+    for(i in mobile_keys){
+      if(navigator.userAgent.match(mobile_keys[i]) !=null){
+        location.href='http://sree.dothome.co.kr/homepage/m/index.html'; //모바일로 연결해라
+        break; //더이상 시행 안함
+      }
+    }
+  </script>
+
+  <style>
+    .swiper { width: 100%; height: 100%;    }
+    .swiper-slide {text-align: center; font-size: 18px; background: #fff;display: flex; justify-content: center; align-items: center; }
+    .swiper-slide img { display: block;  width: 100%; height: 100%;  object-fit: cover; }
+  </style>
+</head>
+
+<body>
+<form name="검색" method="get" action="#"> 
+<!-- 헤더 -->
+  <header>
+  <!-- 헤더탑 : 로고 상단네비2-->
+  <div class="h_top">
+    <h1><a href="" title="홈으로 가기"><img src="./img/logo1.png" alt="로고"></a>&#x3000;</h1>
+    <nav class="h_l_nav">
+      <ul>
+        <li><a href="https://www.facebook.com/bhcchicken"><img src="./img/sns_icon01.png" alt="페이스북"></a></li>
+        <li><a href="https://blog.naver.com/bhc_bsr"><img src="./img/sns_icon02.png" alt="블로그"></a></li>
+        <li><a href="https://www.instagram.com/bhc_chicken_official/?igshid=16tcbhequ830e"><img src="./img/sns_icon03.png" alt="인스타그램"></a></li>
+        <li><a href="https://pf.kakao.com/_ExlBVl"><img src="./img/sns_icon04.png" alt="카카오톡"></a></li>
+      </ul>
+    </nav>
+    <nav class="h_r_nav">
+      <ul>
+        <li class="search_box"><input type="search" id="search_box" placeholder="가까운 매장 찾기"><label for="search_box" ><i class="fa-solid fa-magnifying-glass"></i></label></li>
+        <li><a href="login.html" title="로그인">로그인</a></li>
+        <li><a href="customer.html" title="고객센터">고객센터</a></li>
+        <li><a href="store.html" title="매장찾기">매장찾기</a></li>
+      </ul>
+    </nav>
+  </div>
+  <!-- 헤더바텀 : 메뉴바 -->
+    <div class="h_bottom">
+      <ul>
+        <li><a href="">메뉴</a>
+          <ul>
+            <li><a href="">베스트</a></li>
+            <li><a href="">치킨</a></li>
+            <li><a href="">사이드 | 소스</a></li>
+            <li><a href="">피자 | 비어존</a></li>
+          </ul>
+        </li>
+        <li><a href="">영양정보</a>
+          <ul>
+            <li><a href="">알레르기</a></li>
+            <li><a href="">영양</a></li>
+            <li><a href="">원산지</a></li>
+          </ul>
+        </li>
+        <li><a href="">온라인몰</a>
+          <ul>
+            <li><a href="">닭가슴살</a></li>
+            <li><a href="">국/탕/찜류</a></li>
+            <li><a href="">간식류</a></li>
+            <li><a href="">펫푸드</a></li>
+          </ul>
+        </li>
+        <li><a href="">창업문의</a>
+          <ul>
+            <li><a href="">창업설명회</a></li>
+            <li><a href="">창업상담</a></li>
+            <li><a href="">창업QnA</a></li>
+          </ul>
+        </li>
+        <li><a href="">bhc브랜드</a>
+          <ul>
+            <li><a href="">브랜드 소개</a></li>
+            <li><a href="">뉴스 & 공지</a></li>
+            <li><a href="">CF</a></li>
+            <li><a href="">이벤트</a></li>
+          </ul>
+        </li>
+        <li><a href="">고객센터</a>
+          <ul>
+            <li><a href="">E-coupon</a></li>
+            <li><a href="">매장찾기</a></li>
+            <li><a href="">자주 하는 질문</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+<!-- 메인 -->
+<main>
+  <!-- 사이드 메뉴 -->
+  <article class="side_menu">
+    <h6>제목</h6>
+    <img src="./img/call.png" alt="전화기 아이콘">
+    <p>주문전화</p>
+    <p>0000-0000</p>
+    <p><a href="">메뉴</a></p>
+    <p><a href="">온라인몰</a></p>
+    <p><a href="">창업</a></p>
+    <p><a href="">고객센터</a></p>
+    <p><a href="#">맨 위로</a></p>
+  </article>
+
+  <!-- 슬라이드 메인 베너 Swiper -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="./img/main_banner01.png" alt="치킨광고배너01"></div>
+      <div class="swiper-slide"><img src="./img/main_banner02.png" alt="치킨광고배너02"></div>
+      <div class="swiper-slide"><img src="./img/main_banner03.png" alt="치킨광고배너03"></div>
+      <div class="swiper-slide"><img src="./img/main_banner04.png" alt="치킨광고배너04"></div>
+      <div class="swiper-slide"><img src="./img/main_banner05.png" alt="치킨광고배너05"></div>
+      <div class="swiper-slide"><img src="./img/main_banner06.png" alt="치킨광고배너06"></div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+    </script>
+    
+
+  <!-- 퀵메뉴 -->
+  <section class="quick_menu">
+    <h2>퀵메뉴</h2>
+    <ul>
+      <li><a href=""><img src="./img/icon1.png" alt="주문하기"><p>주문</p></a></li>
+      <li><a href=""><img src="./img/icon2.png" alt="퀵오더"><p>퀵오더</p></a></li>
+      <li><a href=""><img src="./img/icon3.png" alt="온라인몰"><p>온라인몰</p></a></li>
+      <li><a href=""><img src="./img/icon4.png" alt="매장찾기"><p>매장찾기</p></a></li>
+      <li><a href=""><img src="./img/icon5.png" alt="E-쿠폰"><p>E-쿠폰</p></a></li>
+    </ul>
+  </section>
+
+  <!-- 대표메뉴 -->
+  <section class="best_menu">
+      <h2>대표메뉴</h2>
+    <article>
+      <div class="box01">
+        <h3><img src="./img/menu_icon1.png" alt="베스트메뉴 아이콘">베스트메뉴</h3>
+        <div class="menu menu01">
+          <img src="./img/best01.png" alt="뿌링클">
+          <div class="txt_box2">
+            <p class="size16">뿌링클</p>
+            <p class="size13" >원산지 : 닭(국내산) <br> 알러지 : 닭, 밀, 우유, 대두</p>
+            <p class="size16">16,000원</p>
+            <a href="" class="btn_bag">메뉴담기</a>
+          </div>
+        </div>
+        <p><a href="" class="btn_more">더보기 &#x003E;</a></p>
+      </div>
+      <div class="box01">
+        <h3><img src="./img/menu_icon2.png" alt="치킨 아이콘">치킨 </h3>
+        <div class="menu menu02">
+          <img src="./img/img_best01.png" alt="베스트메뉴">
+          <div class="txt_box2">
+            <p class="size16">HOT후라이드콤보</p>
+            <p class="size13" >원산지 : 닭(국내산) <br> 알러지 : 닭, 밀, 우유, 대두</p>
+            <p class="size16">23,000원</p>
+            <a href="" class="btn_bag">메뉴담기</a>
+          </div>
+        </div>
+        <p><a href="" class="btn_more">더보기 &#x003E;</a></p>
+      </div>
+      <div class="box01">
+        <h3><img src="./img/menu_icon3.png" alt="사이드소스 아이콘">사이드&#x00B7;소스</h3>
+        <div class="menu menu03">
+          <img src="./img/best02.png" alt="뿌링진매채튀김">
+          <div class="txt_box2">
+            <p class="size16">뿌링진미채튀김</p>
+            <p class="size13">원산지 : 오징어(페루산) <br><p>알러지 : 오징어, 밀, 우유, 대두</p>
+            <p class="size16">5,500원</p>
+            <a href="" class="btn_bag">메뉴담기</a>
+          </div>
+        </div>
+        <p><a href="" class="btn_more">더보기 &#x003E;</a></p>
+      </div>
+      <div class="box01">
+        <h3><img src="./img/menu_icon4_1.png" alt="피자 아이콘"><img src="./img/menu_icon4_2.png" alt="비어존 아이콘">피자&#x00B7;비어존</h3>
+        <div class="menu menu04">
+          <img src="./img/best04.png" alt="bhc얼큰어묵탕">
+          <div class="txt_box2">
+            <p class="size16">bhc얼큰어묵탕</p>
+            <p class="size13">원산지 : 어묵(국내산)<br>알러지 : 대두, 밀, 게, 오징어</p>
+            <p class="size16">16,000원</p>
+            <a href="" class="btn_bag">메뉴담기</a>
+          </div>
+      </div>
+        <p><a href="" class="btn_more">더보기 &#x003E;</a></p>
+      </div>
+    </article>
+  </section>
+
+  <!-- 04 온라인몰/이벤트 -->
+  <article class="mall_event">
+    <h4>04 온라인몰/이벤트</h4>
+      <input type="radio" id="mall" name="c" checked><label for="mall">온라인몰 </label> 
+      <input type="radio" id="event" name="c"><label for="event"> 이벤트</label>
+  
+      <div class="con_box01">
+        <ul>
+          <li>
+            <a href="#"><img src="./img/mall01.jpg" alt="닭가슴살"><p>닭가슴살</p></a>
+          </li>
+          <li>
+            <a href="#"><img src="./img/mall02.jpg" alt="국/탕/찜류"><p>국/탕/찜류</p></a>
+          </li>
+          <li>
+            <a href="#"><img src="./img/mall03.jpg" alt="간식류"><p>간식류</p></a>
+          </li>
+          <li>
+            <a href="#"><img src="./img/mall4.jpg" alt="펫푸드"><p>펫푸드</p></a>
+            </li>      
+          </ul>
+      </div> 
+  
+  <div class="con_box02">
+    <figure>
+      <img src="./img/m_banner7.png" alt="bhc 치킨 비어존 인증샷 이벤트">
+      <figcaption>
+        <a href="#">
+        <h3>bhc 치킨 비어존 인증샷 이벤트</h3>
+        <p>2024.04.01~2024.04.30</p>
+        <p>더보기 &#x003E;</p>
+        </a>
+      </figcaption>
+    </figure>
+
+    <figure>
+      <img src="./img/m_banner5.png" alt="bhc x 배달의민족 뿌링클 6천원에 드세요">
+      <figcaption>
+      <a href="#">
+      <h3>뿌링클 6천원에 드세요</h3>
+      <p>2024.04.01~2024.04.30</p>
+      <p>더보기 &#x003E;</p>
+      </a>
+      </figcaption>
+    </figure>
+
+    <figure>
+      <img src="./img/cf_img.png" alt="CF 광고">
+      <figcaption> 
+      <a href="#">
+      <h3>[CF] 마늘, 버터와 크런치한 후레이크의 마법같은 조합! 마법클 <br><br></h3>
+      <p>더보기 &#x003E;</p>
+      </a>
+      </figcaption>
+    </figure>
+  </div>
+  </article>
+
+  <!-- bhc 스토리 --><!-- Swiper -->
+  <section class="con05">
+    <h2>bhc 스토리</h2>
+    <div class="bhc_story ">
+      <input type="radio" id="tab01" name="a" checked><label for="tab01" class="label label01">BHC의 다짐</label> 
+      <input type="radio" id="tab02" name="a"><label for="tab02" class="label label02">비법</label>
+      <input type="radio" id="tab03" name="a"><label for="tab03" class="label label03" >고객과의 약속</label>
+      <input type="radio" id="tab04" name="a"><label for="tab04" class="label label04" >BHC의 다짐</label>
+      <input type="radio" id="tab05" name="a"><label for="tab05" class="label label05">과감하고 진취적으로</label>
+
+      <div class="banner01 ">
+        <div class="txt_box1">
+          <p>BHC의 다짐</p>
+          <p class="size16">Better & Happy & Choice!</p>
+          <p class="size16"><br>더 깨끗하게</p>
+          <p class="size16">항상 위생과 청결에 힘쓰도록 하겠습니다.</p>
+          <p class="size16"><br>더 친절하게</p>
+          <p class="size16">고객 중심에서 조금 더 친절하게 고객에게 다가가겠습니다.</p>
+          <p class="size16"><br>더 맛있게</p>
+          <p class="size16">트렌드에 맞는 메뉴 개발과 매뉴얼 준수로 최상의 맛을 제공하겠습니다.</p>
+        </div>
+      </div>
+
+      <div class="banner02 ">
+        <div class="item_box">
+          <h3>BHC 맛의 비결</h3>
+          <div class="item">
+            <div class="item01">
+              <img src="./img/method_01.png" alt="">
+              <h4>24시간 냉장숙성 공법</h4>
+              <p class="size16">BHC 치킨은 <br>
+                속살까지 맛이 밸 수 있도록 <br> 냉장 숙성을 하며, 주문 후 조리를 통하여<br> BHC 치킨 고유의 맛을 지킵니다.</p>
+            </div>
+            <div class="item02">
+              <img src="./img/method_02.png" alt="">
+              <h4>천연재료</h4>
+              <p class="size16">30여 가지 천연재료로 <br> 양념한 BHC의 맛은 <br> 어느 누구도 따라올 수 없습니다.</p>
+            </div>
+            <div class="item03">
+              <img src="./img/method_03.png" alt="">
+              <h4>고올레산 해바라기유</h4>
+              <p class="size16"> 불포화지방산이 많고 가열산화에 안전한 <br>     올레인산이 풍부한 해바라기유를 사용하여<br> 고소하며 깨끗한 풍미가 좋은 치킨을 만듭니다.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="banner03 ">      
+        <div>
+          <h4>고객과의 약속</h4>
+          <p>더 나은 경험을 선물하는 BHC</p>
+          <p><br><br> BHC그룹은 3대 고객 중시 운영방침을 항상 마음에 새기고</p>
+          <p class="size16">고객에게 최고의 맛과, 최상의 서비스를 제공할 수 있도록외식기업의본분과 책임에</p>
+          <p class="size16">충실할 것을 약속드립니다.</p>
+        </div>
+      </div>
+
+      <div class="banner04 ">
+        <div>
+          <img src="../09_구현/img/logo2.png" alt="bhc로고">
+          <p class="size16">치열한 치킨시장에서 변화하는 트랜드를 기반으로 꾸준한 신 메뉴 개발에 중심을 두고 있는 bhc는,<br>매년 소비자들의 충성도를 높여오며 치킨 브랜드 파워 1위를 자랑하는 대한민국 대표 치킨 브랜드입니다.</p>
+          <p><br><br><br> 국내 1위를 넘어 세계로 <span class="size16"><br> 해외 시장은 현재 5개 국에 12개 매장을 운영 중</span></p>
+          <img src="../09_구현/img/strore.png" alt="bhc가맹점사진">
+        </div>
+      </div>
+
+      <div class="banner05 e">
+        <div>
+          <h4>과감하고 진취적으로 <br> 
+          <span>변화하는 외식시장을 선도하는 BHC</span></h4>
+          <p class="size16"><br><br> BHC그룹은 항상 고객의 소리에 귀 기울이며 불편함은 과감하게 개선하고 적극적인 투자를 통해 진화하고 있습니다. <br>외식기업의 핵심인 메뉴개발 강화를 위해 끊임없이 노력하고 있으며 고객에게 최고의 맛을 제공하고 <br>  다양한 분야의 외식문화를 선도하기 위해 노력하고 있습니다</p>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div> -->
+  </section>
+
+  <!-- <script>
+    var swiper = new Swiper(".mySwiper2", {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+    </script> -->
+
+  <!-- bhc 가맹점 개설 안내 -->
+  <section class="con06">
+    <h2>bhc 가맹점 개설 안내</h2>
+    <ul>
+      <li>
+        <div>
+        <h3>Why bhc?</h3>  
+        <p>Better &#x0026; Happier &#x0026; Choice!</p>  
+        <p>치킨 프랜차이즈 수익률 1위 BHC</p>  
+        <p>수익성 1위, 창업비용 4배 평균 매출 달성 노하우!</p> 
+        <a href="" class="btn_more">더보기 &#x003E;</a>
+        </div>
+      </li>
+      <li>
+        <div>  
+          <h3>창업 F&#x0026;Q</h3>
+          <p>투자는 적게! 수익은 많게!</p>
+          <p>유행으로 그치는 사업은 미래를 보장할 수 없습니다.</p>  
+          <p>시스템과 경쟁력을 갖춘 BHC가</p>  
+          <p>여러분께 확실한 호황과 성공을 약속합니다.</p>  
+          <a href="" class="btn_more">더보기 &#x003E;</a>
+        </div>
+      </li>
+      <li>
+        <div>  
+          <h3>창업 F&#x0026;Q</h3>
+          <p>신뢰를 바탕으로</p>
+          <p>가맹점주와 본사가 상생하는 </p>  
+          <p>BHC의 가족으로 초대합니다.</p>  
+          <p>BHC와 손을 잡고 성공의 문을 두드리십시오.</p>  
+          <a href="" class="btn_more">더보기 &#x003E;</a>
+        </div>
+      </li>
+    </ul>
+  </section>
+</main>
+
+<!-- 푸터-->
+<footer>
+  <div class="f_top">
+    <!-- 로고 -->
+    <p>주문전화 <br>
+      0000-0000 </p>
+    <h2><a href=""><img src="./img/logo2.png" alt="하단로고"></a></h2>
+
+    <!-- 메뉴 -->
+    <div class="footer_menu">
+      <ul>
+        <li><a href="">메뉴</a>
+          <ul>
+            <li><a href="">베스트</a></li>
+            <li><a href="">치킨</a></li>
+            <li><a href="">사이드 | 소스</a></li>
+            <li><a href="">피자 | 비어존</a></li>
+          </ul>
+        </li>
+        <li><a href="">영양정보</a>
+          <ul>
+            <li><a href="">알레르기</a></li>
+            <li><a href="">영양</a></li>
+            <li><a href="">원산지</a></li>
+          </ul>
+        </li>
+        <li><a href="">온라인몰</a>
+          <ul>
+            <li><a href="">닭가슴살</a></li>
+            <li><a href="">국/탕/찜류</a></li>
+            <li><a href="">간식류</a></li>
+            <li><a href="">펫푸드</a></li>
+          </ul>
+        </li>
+        <li><a href="">창업문의</a>
+          <ul>
+            <li><a href="">창업설명회</a></li>
+            <li><a href="">창업상담</a></li>
+            <li><a href="">창업QnA</a></li>
+          </ul>
+        </li>
+        <li><a href="">bhc브랜드</a>
+          <ul>
+            <li><a href="">브랜드 소개</a></li>
+            <li><a href="">뉴스 & 공지</a></li>
+            <li><a href="">CF</a></li>
+            <li><a href="">이벤트</a></li>
+          </ul>
+        </li>
+        <li><a href="">고객센터</a>
+          <ul>
+            <li><a href="">E-coupon</a></li>
+            <li><a href="">매장찾기</a></li>
+            <li><a href="">자주 하는 질문</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <!-- 패밀리사이트 -->
+    <select name="패밀리사이트" id="form" onchange="siteUrl(this);" class="family_site">
+      <option value="">family site</option>
+      <option value="https://www.outback.co.kr/">아웃백</option>    
+      <option value="http://www.superduperburger.co.kr/">수퍼두퍼</option>
+      <option value="https://www.changgo43.co.kr/00_main/main.asp">한우창고</option>
+      <option value="http://jokbalstore.com/">족발상회</option>
+      <option value="http://www.gram-gram.com/renew/">그램그램</option>
+      <option value="http://www.bkfood.kr/renew/">큰맘할매순댓국</option>
+    </select>
+  </div>
+
+
+  <div class="f_bottom">
+  <!-- 약관 -->
+  <nav>
+    <ul>
+      <li>이용약관</li>
+      <li>개인정보처리방침</li>
+      <li>위치기반서비스이용약관</li>
+      <li>영상정보처리기기운영방침</li>
+      <li>이메일무단수집거부</li>
+      <li>사이트맵</li>
+    </ul>
+  </nav>
+
+  <!-- 주소 -->
+  <address>
+    <p> 대전광역시 000 000 (0000) &#65372; 상호 및 대표자 : (주)한국인삼공사 000 &.....대전광역시 000 000 (0000) &#65372; 상호 및 대표자 : (주)한국인삼공사 000 &.....대전광역시 000 000 (0000) &#65372; 상호 및 대표자 : (주)한국인삼공사 000 &.....대전광역시 000 000 (0000) &#65372; 상호 및 대표자 : (주)한국인삼공사 000 &.....</p>
+  </address>
+  </div>
+</footer>
+</form>
+</body>
+</html>

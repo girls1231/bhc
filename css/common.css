@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+/*기본스타일(폰트, 색상, 링크스타일)*/
+
+/*noto sans 글꼴 주소 : 100~900까지 사용 가능!*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+body{
+  font-family: "Noto Sans KR", sans-serif; 
+  font-size : 14px;  
+  color: var(--color_black); 
+  line-height: 160%;}
+a{color: var(--color_black); text-decoration: none;}
+
+:root{
+  --color_orange: #EC6606;
+  --color_black: #222222;
+  --color_white: #ffffff;
+  --color_yellow: #FFD850;
+  --color_gray: #292929;
+
+  --font_size12: 12px;
+  --font_size14: 14px;
+  --font_size16: 16px;
+  --font_size20: 20px;
+}
+
+/* 헤더서식 */
+/* 푸터 서식*/
