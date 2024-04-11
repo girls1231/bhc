@@ -1,0 +1,113 @@
+@charset "utf-8";
+/* 초기화*/
+
+*{margin: 0; padding: 0;}
+ul, li{list-style: none;}
+a{color: #222; text-decoration: none;}
+
+body{
+  font-family: "Noto Sans KR", sans-serif; 
+  font-size: 14px;
+  color: #222;
+  width: 100%;
+}
+
+/*common.css*/
+header{
+  width: 100%;
+  height: 70px;
+  position: relative;
+}
+
+header > h1 > a > img{width: 100px; height: 70px; position: absolute; right: 40%; top:0px;}
+.total_btn{padding : 40px 0 0 20px;}
+
+/*토글버튼 서식*/
+.fa-cart-shopping{position:absolute; right: 20px; top: 14px; }
+.fa-cart-shopping, .fa-bars, .total_btn,.fa-solid{font-size: 45px; color: rgba(34,34,34,0.8);}
+
+
+#toggle{display: none; } /*체크박스 없애기*/
+
+/*gnb 서식*/
+.gnb{
+  width:100%; height: 100%; background-color: #EC6606; z-index: 100;
+  position: fixed; /*모바일에서는 무조건 픽스를 주자!*/
+  box-sizing: border-box; /*박스 커지지말게 박스사이징해주기*/
+  left: 100%; top: 0px; /*네비게이션 숨기기*/
+  transition: 0.3s;
+}
+/*토글버튼 클릭하면 gnb의 위치가 left 100% -> left 0px;*/
+#toggle:checked + header > .gnb{left: 0px;}
+
+.gnb p{color: white; padding: 60px; padding-bottom: 0px;}
+.gnb > div >a{width: 127px; height: 74px; }
+.gnb h6{text-indent: -99999px;}
+
+/* .gnb > ul{padding-top:100px;} */
+.gnb > ul > li {padding-left: 60px;}
+.gnb > ul > li > a{
+  font-size: 1.1rem; /*1 rem = 16px*/
+  display: block; /*전체 라인에 터치해도 선택 되도록*/
+  line-height: 50px; color: white;}
+.gnb .fa-times{ /*닫기 토글버튼과 메뉴명이 같은 줄에 있지 않도록 해주자!*/
+  font-size: 40px; color: white;
+  position: absolute; right: 3%; top: 3%;}
+.gnb .fa-times:hover{
+  transform: rotate(180deg);}
+
+.gnb .sns_icon{padding: 40px;}
+
+
+/*슬라이드 광고*/
+
+
+/*퀵메뉴*/
+.quick_menu{ height: 200px; width: 100%;}
+.quick_menu h2{text-indent: -9999px;}
+.quick_menu ul{display: flex; padding: 50px 100px; justify-content: space-evenly; padding: 5px; }
+.quick_menu ul li{
+  width: 90px; height: 120px; 
+  border: 4px solid #EC6606; border-radius: 20px; 
+  text-align: center; }
+.quick_menu ul li img{padding-top: 30px; width: 40px; height: 40px; }
+.quick_menu ul li p{font-size: 18px; text-align: center; color: #222; font-weight: bold; }
+
+/*메뉴*/
+.menu{width: 100%; height: 370px;background-color: #EC6606; position: relative;}
+.menu h3{padding: 10px 10px; font-size: 20px;}
+.best, .chicken, .pizza, .side{display: none; }
+
+#best:checked ~ .best, #chicken:checked ~ .chicken, #pizza:checked ~ .pizza, #side:checked ~ .side{display: block;}
+
+#best, #chicken, #pizza, #side{display: none; } /*체크박스 없애기*/
+.label01{right: 190px;}
+.label02{right: 130px;}
+.label03{right: 70px;}
+.label04{right: 10px;}
+
+.label01, .label02, .label03,.label04{cursor: pointer; position: absolute;top:15px; font-size: 16px; font-weight: bold; width: 50px;text-align: center;}
+
+input:checked + label{color: white;}
+label::after{
+  display: block;  content: "";
+  width: 2px; height: 14px;  background-color: white;
+  position:   relative; top:-17px; right: 5px;
+}
+label:first-of-type:after{
+  display: block;  content: "";
+  width: 0px; height: 0px; 
+}
+
+.best ul,.chicken ul, .pizza ul, .side ul{ display:grid; grid-gap: 10px; grid-template-columns: repeat(2,auto); text-align: center;  padding: 20px;  }
+.best img,.chicken img, .pizza img, .side img{width: 140px; height: 101px; border-radius: 10px; background-color: white;}
+
+
+#top{position: fixed; right: 0px; bottom: 10px;}
+/*푸터*/
+footer{height: 100px;}
+footer > div {padding: 10px 0;}
+footer > div > ul{width: 100%; height: 50px;display: flex; justify-content: space-evenly;}
+footer > div li{font-size: 13px; font-weight: bold;padding: 10px;}
+footer div ul li{text-align: center;}
+

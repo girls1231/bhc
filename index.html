@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="./css/common.css" type="text/css">
   <!-- 메인서식 -->
   <link rel="stylesheet" href="./css/main.css" type="text/css">
+  
   <!--아이콘폰트 주소  -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" type="text/css" >
   <!-- 파비콘 이미지 -->
@@ -38,8 +39,8 @@
 
   <style>
     .swiper { width: 100%; height: 100%;    }
-    .swiper-slide {text-align: center; font-size: 18px; background: #fff;display: flex; justify-content: center; align-items: center; }
     .swiper-slide img { display: block;  width: 100%; height: 100%;  object-fit: cover; }
+    :root{--swiper-theme-color:#FFD850 !important;}
   </style>
 </head>
 
@@ -139,7 +140,7 @@
     <div class="swiper-wrapper">
       <div class="swiper-slide"><img src="./img/main_banner01.png" alt="치킨광고배너01"></div>
       <div class="swiper-slide"><img src="./img/main_banner02.png" alt="치킨광고배너02"></div>
-      <div class="swiper-slide"><img src="./img/main_banner03.png" alt="치킨광고배너03"></div>
+      <!-- <div class="swiper-slide"><img src="./img/main_banner03.png" alt="치킨광고배너03"></div> -->
       <div class="swiper-slide"><img src="./img/main_banner04.png" alt="치킨광고배너04"></div>
       <div class="swiper-slide"><img src="./img/main_banner05.png" alt="치킨광고배너05"></div>
       <div class="swiper-slide"><img src="./img/main_banner06.png" alt="치킨광고배너06"></div>
@@ -304,88 +305,92 @@
   </article>
 
   <!-- bhc 스토리 --><!-- Swiper -->
-  <section class="con05">
+  <section class="con05 ">
     <h2>bhc 스토리</h2>
-    <div class="bhc_story ">
-      <input type="radio" id="tab01" name="a" checked><label for="tab01" class="label label01">BHC의 다짐</label> 
+    <div class="bhc_story swiper mySwiper2">
+      <!-- <input type="radio" id="tab01" name="a" checked><label for="tab01" class="label label01">BHC의 다짐</label> 
       <input type="radio" id="tab02" name="a"><label for="tab02" class="label label02">비법</label>
       <input type="radio" id="tab03" name="a"><label for="tab03" class="label label03" >고객과의 약속</label>
       <input type="radio" id="tab04" name="a"><label for="tab04" class="label label04" >BHC의 다짐</label>
-      <input type="radio" id="tab05" name="a"><label for="tab05" class="label label05">과감하고 진취적으로</label>
-
-      <div class="banner01 ">
-        <div class="txt_box1">
-          <p>BHC의 다짐</p>
-          <p class="size16">Better & Happy & Choice!</p>
-          <p class="size16"><br>더 깨끗하게</p>
-          <p class="size16">항상 위생과 청결에 힘쓰도록 하겠습니다.</p>
-          <p class="size16"><br>더 친절하게</p>
-          <p class="size16">고객 중심에서 조금 더 친절하게 고객에게 다가가겠습니다.</p>
-          <p class="size16"><br>더 맛있게</p>
-          <p class="size16">트렌드에 맞는 메뉴 개발과 매뉴얼 준수로 최상의 맛을 제공하겠습니다.</p>
-        </div>
-      </div>
-
-      <div class="banner02 ">
-        <div class="item_box">
-          <h3>BHC 맛의 비결</h3>
-          <div class="item">
-            <div class="item01">
-              <img src="./img/method_01.png" alt="">
-              <h4>24시간 냉장숙성 공법</h4>
-              <p class="size16">BHC 치킨은 <br>
-                속살까지 맛이 밸 수 있도록 <br> 냉장 숙성을 하며, 주문 후 조리를 통하여<br> BHC 치킨 고유의 맛을 지킵니다.</p>
+      <input type="radio" id="tab05" name="a"><label for="tab05" class="label label05">과감하고 진취적으로</label> -->
+        <div class="swiper-wrapper">
+          <div class="banner01 swiper-slide">
+            <div class="txt_box1">
+              <p>BHC의 다짐</p>
+              <p class="size16">Better & Happy & Choice!</p>
+              <p class="size16"><br>더 깨끗하게</p>
+              <p class="size16">항상 위생과 청결에 힘쓰도록 하겠습니다.</p>
+              <p class="size16"><br>더 친절하게</p>
+              <p class="size16">고객 중심에서 조금 더 친절하게 고객에게 다가가겠습니다.</p>
+              <p class="size16"><br>더 맛있게</p>
+              <p class="size16">트렌드에 맞는 메뉴 개발과 매뉴얼 준수로 최상의 맛을 제공하겠습니다.</p>
             </div>
-            <div class="item02">
-              <img src="./img/method_02.png" alt="">
-              <h4>천연재료</h4>
-              <p class="size16">30여 가지 천연재료로 <br> 양념한 BHC의 맛은 <br> 어느 누구도 따라올 수 없습니다.</p>
+          </div>
+        
+          <div class="banner02 swiper-slide">
+            <div class="item_box">
+              <h3>BHC 맛의 비결</h3>
+              <div class="item">
+                <div class="item01">
+                  <img src="./img/method_01.png" alt="">
+                  <h4>24시간 냉장숙성 공법</h4>
+                  <p class="size16">속살까지 맛이 밸 수 있도록 <br> 냉장 숙성을 하며, 주문 후 조리를 통하여<br> BHC 치킨 고유의 맛을 지킵니다.</p>
+                </div>
+                <div class="item02">
+                  <img src="./img/method_02.png" alt="">
+                  <h4>천연재료</h4>
+                  <p class="size16">30여 가지 천연재료로 <br> 양념한 BHC의 맛은 <br> 어느 누구도 따라올 수 없습니다.</p>
+                </div>
+                <div class="item03">
+                  <img src="./img/method_03.png" alt="">
+                  <h4>고올레산 해바라기유</h4>
+                  <p class="size16"> 불포화지방산이 많고 가열산화에 안전한 <br>     올레인산이 풍부한 해바라기유를 사용하여<br> 고소하며 깨끗한 풍미가 좋은 치킨을 만듭니다.</p>
+                </div>
+              </div>
             </div>
-            <div class="item03">
-              <img src="./img/method_03.png" alt="">
-              <h4>고올레산 해바라기유</h4>
-              <p class="size16"> 불포화지방산이 많고 가열산화에 안전한 <br>     올레인산이 풍부한 해바라기유를 사용하여<br> 고소하며 깨끗한 풍미가 좋은 치킨을 만듭니다.</p>
+          </div>
+        
+          <div class="banner03 swiper-slide">      
+            <div>
+              <h4>고객과의 약속</h4>
+              <p>더 나은 경험을 선물하는 BHC</p>
+              <p><br><br> BHC그룹은 3대 고객 중시 운영방침을 항상 마음에 새기고</p>
+              <p class="size16">고객에게 최고의 맛과, 최상의 서비스를 제공할 수 있도록외식기업의본분과 책임에</p>
+              <p class="size16">충실할 것을 약속드립니다.</p>
+            </div>
+          </div>
+        
+          <div class="banner04 swiper-slide">
+            <div>
+              <img src="../09_구현/img/logo2.png" alt="bhc로고">
+              <p class="size16">치열한 치킨시장에서 변화하는 트랜드를 기반으로 꾸준한 신 메뉴 개발에 중심을 두고 있는 bhc는,<br>매년 소비자들의 충성도를 높여오며 치킨 브랜드 파워 1위를 자랑하는 대한민국 대표 치킨 브랜드입니다.</p>
+              <p><br><br><br> 국내 1위를 넘어 세계로 <span class="size16"><br> 해외 시장은 현재 5개 국에 12개 매장을 운영 중</span></p>
+              <img src="../09_구현/img/strore.png" alt="bhc가맹점사진">
+            </div>
+          </div>
+        
+          <div class="banner05 swiper-slide">
+            <div>
+              <h4>과감하고 진취적으로 <br> 
+              <span>변화하는 외식시장을 선도하는 BHC</span></h4>
+              <p class="size16"><br><br> BHC그룹은 항상 고객의 소리에 귀 기울이며 불편함은 과감하게 개선하고 적극적인 투자를 통해 진화하고 있습니다. <br>외식기업의 핵심인 메뉴개발 강화를 위해 끊임없이 노력하고 있으며 고객에게 최고의 맛을 제공하고 <br>  다양한 분야의 외식문화를 선도하기 위해 노력하고 있습니다</p>
             </div>
           </div>
         </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
       </div>
-
-      <div class="banner03 ">      
-        <div>
-          <h4>고객과의 약속</h4>
-          <p>더 나은 경험을 선물하는 BHC</p>
-          <p><br><br> BHC그룹은 3대 고객 중시 운영방침을 항상 마음에 새기고</p>
-          <p class="size16">고객에게 최고의 맛과, 최상의 서비스를 제공할 수 있도록외식기업의본분과 책임에</p>
-          <p class="size16">충실할 것을 약속드립니다.</p>
-        </div>
-      </div>
-
-      <div class="banner04 ">
-        <div>
-          <img src="../09_구현/img/logo2.png" alt="bhc로고">
-          <p class="size16">치열한 치킨시장에서 변화하는 트랜드를 기반으로 꾸준한 신 메뉴 개발에 중심을 두고 있는 bhc는,<br>매년 소비자들의 충성도를 높여오며 치킨 브랜드 파워 1위를 자랑하는 대한민국 대표 치킨 브랜드입니다.</p>
-          <p><br><br><br> 국내 1위를 넘어 세계로 <span class="size16"><br> 해외 시장은 현재 5개 국에 12개 매장을 운영 중</span></p>
-          <img src="../09_구현/img/strore.png" alt="bhc가맹점사진">
-        </div>
-      </div>
-
-      <div class="banner05 e">
-        <div>
-          <h4>과감하고 진취적으로 <br> 
-          <span>변화하는 외식시장을 선도하는 BHC</span></h4>
-          <p class="size16"><br><br> BHC그룹은 항상 고객의 소리에 귀 기울이며 불편함은 과감하게 개선하고 적극적인 투자를 통해 진화하고 있습니다. <br>외식기업의 핵심인 메뉴개발 강화를 위해 끊임없이 노력하고 있으며 고객에게 최고의 맛을 제공하고 <br>  다양한 분야의 외식문화를 선도하기 위해 노력하고 있습니다</p>
-        </div>
-      </div>
-    </div>
-    <!-- <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-pagination"></div> -->
   </section>
 
-  <!-- <script>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
     var swiper = new Swiper(".mySwiper2", {
-      slidesPerView: 1,
       spaceBetween: 30,
+      centeredSlides: true,
       loop: true,
       autoplay: {
         delay: 2500,
@@ -400,7 +405,7 @@
         prevEl: ".swiper-button-prev",
       },
     });
-    </script> -->
+  </script>
 
   <!-- bhc 가맹점 개설 안내 -->
   <section class="con06">
@@ -515,12 +520,12 @@
   <!-- 약관 -->
   <nav>
     <ul>
-      <li>이용약관</li>
-      <li>개인정보처리방침</li>
-      <li>위치기반서비스이용약관</li>
-      <li>영상정보처리기기운영방침</li>
-      <li>이메일무단수집거부</li>
-      <li>사이트맵</li>
+      <li><a href="" title="이용약관">이용약관</a></li>
+      <li><a href="" title="개인정보처리방침">개인정보처리방침</a></li>
+      <li><a href="" title="위치기반서비스이용약관">위치기반서비스이용약관</a></li>
+      <li><a href="" title="영상정보처리기기운영방침">영상정보처리기기운영방침</a></li>
+      <li><a href="" title="이메일무단수집거부">이메일무단수집거부</a></li>
+      <li><a href="" title="사이트맵">사이트맵</a></li>
     </ul>
   </nav>
 

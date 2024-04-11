@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>bhc 모바일</title>
+    <!-- 초기화 -->
+    <link rel="stylesheet" href="./css/reset.css" type="text/css">
+    <!-- 공통서식 -->
+    <link rel="stylesheet" href="./css/common.css" type="text/css">
+    <!-- 메인서식 -->
+    <link rel="stylesheet" href="./css/main.css" type="text/css">
+    <!--아이콘폰트 주소  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" type="text/css" >
+    <!-- 파비콘 이미지 -->
+    <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico">
+
+  <!-- Link Swiper's CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+
+  <style>
+  .swiper {width: 100%; height: 100%;}
+  .swiper-slide {text-align: center; font-size: 18px; background: #fff; display: flex; justify-content: center;align-items: center;}
+  .swiper-slide img {display: block; width: 100%; height: 100%; object-fit: cover;}
+  .swiper {margin-left: auto; margin-right: auto;}
+  </style>
+
+</head>
+<body>
+  <input type="checkbox" id="toggle"> <!--여는 버튼--> <!--이게 제일 먼저 들어간다-->
+
+<!--상단 헤더영역 시작  -->
+<header>
+  <h1><a href="index.html" title="메인페이지로 바로가기"><img src="../img/logo1.png" alt="bhc 로고"></a></h1>
+  <label for="toggle" class="total_btn"><i class="fas fa-bars"></i></label>
+  <i class="fa-solid fa-cart-shopping"></i>
+
+  <!-- 전체메뉴 - 네비게이션 만들기 -->
+  <nav class="gnb">
+    <label for="toggle" class="fas fa-times"></label> <!--닫기 버튼-->
+      <div>
+        <h6>로고</h6>
+        <p>주문전화 0000-0000</p>
+        <a href="" title="홈으로"><img src="../img/logo2.png" alt=""></a>
+      </div>
+    <ul>
+      <li><a href="" title="메뉴">메뉴 </a></li>
+      <li><a href="" title="메뉴">영양정보</a></li>
+      <li><a href="" title="메뉴">온라인몰</a></li>
+      <li><a href="" title="메뉴">창업문의 </a></li>
+      <li><a href="" title="메뉴">bhc스토리</a></li>
+      <li><a href="" title="메뉴">고객센터</a></li>
+    </ul>
+    <div class="sns_icon">
+      <a href="https://www.facebook.com/bhcchicken" title="페이스북 바로가기"><img src="../img/sns_icon01.png" alt="페이스북"></a>
+      <a href="https://blog.naver.com/bhc_bsr" title="블로그 바로가기"><img src="../img/sns_icon02.png" alt="블로그"></a>
+      <a href="https://www.instagram.com/bhc_chicken_official/?igshid=16tcbhequ830e" title="인스타 바로가기"><img src="../img/sns_icon03.png" alt="인스타"></a>
+      <a href="https://pf.kakao.com/_ExlBVl" title="카카오톡 바로가기"><img src="../img/sns_icon04.png" alt="카카오톡"></a>
+    </div>
+  </nav>
+
+</header>
+<!--메인영역 시작  -->
+<main>
+<!-- 메인슬라이드 -->
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+    <!-- Swiper -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><a href="" title=""><img src="../img/m_banner1.png" alt="메인베너"></a></div>
+        <div class="swiper-slide"><a href="" title=""><img src="../img/m_banner2.png" alt="메인베너"></a></div>
+        <div class="swiper-slide"><a href="" title=""><img src="../img/m_banner3.png" alt="메인베너"></a></div>
+        <div class="swiper-slide"><a href="" title=""><img src="../img/m_banner4.png" alt="메인베너"></a></div>
+        <div class="swiper-slide"><a href="" title=""><img src="../img/m_banner5.png" alt="메인베너"></a></div>
+        <div class="swiper-slide"><a href="" title=""><img src="../img/m_banner6.png" alt="메인베너"></a></div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
+
+<!--퀵 메뉴  -->
+<section class="quick_menu">
+  <h2>퀵메뉴</h2>
+  <ul>
+    <li><a href="" title="주문 바로가기"><img src="../img/icon1.png" alt="주문하기"><p>주문</p></a></li>
+    <li><a href="" title="E-쿠폰 바로가기"><img src="../img/icon5.png" alt="E-쿠폰"><p>E-쿠폰</p></a></li>
+    <li><a href="" title="매장찾기 바로가기"><img src="../img/icon4.png" alt="매장찾기"><p>매장찾기</p></a></li>
+  </ul>
+</section>
+
+<section class="menu">
+  <h3>메뉴</h3>
+  <input type="radio" id="best" name="a" checked><label for="best" class="label01">베스트</label>
+  <input type="radio" id="chicken" name="a"><label for="chicken" class="label02">치킨</label>
+  <input type="radio" id="pizza" name="a"><label for="pizza" class="label03">피자</label>
+  <input type="radio" id="side" name="a"><label for="side" class="label04">사이드</label>
+  <div class="best">
+    <ul>
+      <li>
+        <a href="" title="메뉴로 바로가기"><img src="../img/chicken01.png" alt="뿌링클콤보"></a>
+        <p>뿌링클콤보 &#x007C; 23,000원</p>
+      </li>
+      <li>
+        <a href="" title="메뉴로 바로가기"><img src="../img/pizza01.png" alt="고구마피자"></a>
+        <p>고구마피자 &#x007C; 19,000원</p>
+      </li>
+      <li>
+        <a href="" title="메뉴로 바로가기"><img src="../img/side01.jpg" alt="케이준프라이"></a>
+        <p>케이준프라이 &#x007C; 4,000원</p>
+      </li>
+      <li>
+        <a href="" title="메뉴로 바로가기"><img src="../img/side04.png" alt="뿌링어묵볶이"></a>
+        <p>뿌링어묵볶이 &#x007C; 9,900원</p>
+      </li>
+    </ul>
+  </div>
+  <div class="chicken">
+    <ul>
+      <li><a href="" title="메뉴로 바로가기"><img src="../img/chicken01.png" alt="뿌링클"></a><p>뿌링클 &#x007C; 16,000원</p></li>
+      <li><a href="" title="메뉴로 바로가기"><img src="../img/chicken02.png" alt="골드킹"></a><p>골드킹 &#x007C; 23,000원</p></li>
+      <li><a href="" title="메뉴로 바로가기"><img src="../img/chicken03.png" alt="후라이드"></a><p>후라이드 &#x007C; 23,000원</p></li>
+      <li><a href="" title="메뉴로 바로가기"><img src="../img/chicken04.png" alt="맛초킹"></a><p>맛초킹 &#x007C; 23,000원</p></li>
+    </ul>
+  </div>
+  <div class="pizza">
+    <ul>
+      <li><a href="" title="메뉴로 바로가기"><img src="../img/pizza01.png" alt="고구마피자"></a><p>고구마피자 &#x007C; 19,000원</p>      </li>
+      <li><a href="" title="메뉴로 바로가기"><img src="../img/pizza02.png" alt="불고기피자"></a><p>불고기피자 &#x007C; 19,000원</p>      </li>
+      <li><a href="" title="메뉴로 바로가기"><img src="../img/pizza03.png" alt="퐁듀피자"></a><p>퐁듀피자 &#x007C; 19,000원</p>      </li>
+      <li><a href="" title="메뉴로 바로가기"><img src="../img/pizza04.png" alt="콤비네이션피자"></a><p>콤비네이션 &#x007C; 19,000원</p>      </li>
+    </ul>
+  </div>
+  <div class="side">
+    <ul>
+      <li><a href="" title="메뉴로 바로가기"><img src="../img/side01.jpg" alt="케이준프라이"></a><p>케이준프라이 &#x007C; 4,000원</p>      </li>
+      <li><a href="" title="메뉴로 바로가기"><img src="../img/side02.png" alt="뿌링소떡"></a><p>뿌링소떡 &#x007C; 4,000원</p>      </li>
+      <li><a href="" title="메뉴로 바로가기"><img src="../img/side03.png" alt="치킨스넥"></a><p>치킨스넥 &#x007C; 11,000원</p>      </li>
+      <li><a href="" title="메뉴로 바로가기"><img src="../img/side04.png" alt="뿌링어묵볶이"></a><p>뿌링어묵볶이 &#x007C; 9,900원</p>      </li>
+    </ul>
+  </div>
+</section>
+
+<img src="../img/btn_top.png" alt="홈으로 올라가기" id="top">
+</main>
+
+
+<!--푸터영역 시작  -->
+<footer>
+  <div>
+    <ul>
+      <li><a href="" title=""><i class="fa-solid fa-house"></i><p>홈으로</p></a></li>
+      <li><a href="" title=""><i class="fa-solid fa-circle-info"></i><p>영양정보</p></a></li>
+      <li><a href="" title=""><i class="fa-solid fa-magnifying-glass"></i><p>검색</p></a></li>
+      <li><a href="" title=""><i class="fa-solid fa-user"></i><p>로그인</p></a></li>
+    </ul>
+  </div>
+</footer>
+</body>
+</html>

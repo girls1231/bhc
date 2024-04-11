@@ -1,0 +1,128 @@
+@charset "utf-8";
+
+/*기본스타일(폰트, 색상, 링크스타일)*/
+
+/*noto sans 글꼴 주소 : 100~900까지 사용 가능!*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+body{
+  font-family: "Noto Sans KR", sans-serif; 
+  font-size : 14px;  
+  color: var(--color_black); 
+  line-height: 160%;}
+a{color: var(--color_black); text-decoration: none;}
+ul, li{list-style: none;}
+
+h2{font-size: 20px; text-align: center;}
+
+.size13{font-size: 13px;}
+.size16{font-size: 16px;}
+.font40{font-size: 40px;} 
+
+:root{
+  --color_orange: #EC6606;
+  --color_black: #222222;
+  --color_white: #ffffff;
+  --color_yellow: #FFD850;
+  --color_gray: #292929;
+
+  --font_size12: 12px;
+  --font_size14: 14px;
+  --font_size16: 16px;
+  --font_size20: 20px;
+}
+
+
+/* 헤더서식 */
+header .h_top, header .h_bottom, main, footer{margin: 0 auto; padding:0;}
+
+/*헤더***************************/
+header{height: 174px;}
+
+header .h_top, header .h_bottom{width: 1200px;}
+header .h_top{ height: 120px; position: relative;}
+header .h_top h1{ text-align: center;}
+header .h_top h1 img{ height: 72px; padding-top: 30px;}
+
+/*sns 아이콘*/
+header .h_top > .h_l_nav{position: absolute; top: 20px;  left: 45px; }
+header .h_top > .h_l_nav ul{display: flex; text-align: left;}
+header .h_top > .h_l_nav ul li{padding: 0px 10px; }
+header .h_top > .h_l_nav ul li img{width: 45px; height: 45px;} /*아이콘 크기*/
+header .h_top > .h_l_nav ul li:hover img{transform: scale(1.2);}
+
+/*상단 네비*/
+header .h_top > .h_r_nav{position: absolute; top: 20px;  right: 70px; }
+header .h_top > .h_r_nav ul{display: flex; text-align: right;}
+header .h_top > .h_r_nav ul li { padding: 0px 10px;}
+header .h_top > .h_r_nav ul li a:hover{color:var(--color_orange);}
+
+header .h_top > .h_r_nav ul li i{color:var(--color_orange);padding: 0 0 5px 0;}
+header .h_top > .h_r_nav ul input{width: 10px;border: none;transition: 0.5s; color:var(--color_orange);}
+.search_box{border: 1px solid var(--color_orange); border-radius: 20px;}
+header .h_top > .h_r_nav ul input:focus{
+  text-align: center; width: 150px;color:var(--color_orange); outline: none;}
+
+  
+/*메인 메뉴바*/
+header .h_bottom{ 
+  position: relative;
+  text-align: center; height: 54px;
+  overflow: hidden;transition: 0.3s; }
+.h_bottom:hover{height: 300px; background-color: white;z-index: 10000;}
+header .h_bottom >ul {
+  display: flex; line-height: 54px;
+  justify-content: space-around ;text-align: left; 
+}
+header .h_bottom >ul li a:hover{color:var(--color_orange);}
+header .h_bottom >ul li{text-align: center;  width: 150px; }
+header .h_bottom >ul > li::first-line {font-weight: bold; font-size: 20px; }
+header .h_bottom >ul > li >a:after{display: block; content: ""; width: 100px; height: 3px; position: relative; top:0px; right: -30px; transition: 0.3s;}
+header .h_bottom >ul > li >a:hover::after{background-color:var(--color_orange);transform: scale(1.2);}
+
+
+
+/*라디오 서식 체크된(checked) 아이들에게 서식 적용*/
+input[type=radio]{display: none; } 
+input[type=radio]:checked + label{font-weight: bold;  background-color:var(--color_orange);}
+label{cursor: pointer; display: inline-block;} 
+
+
+
+
+/* 푸터 서식*/
+/*푸터*/
+footer{height: 400px; background-color:var(--color_black);}
+.f_top{width: 1200px; margin: 0 auto; position: relative; text-align: right; padding-top: 40px; padding-bottom: 200px;border-bottom: 1px solid white;}
+.f_top p{
+  position: absolute; top: 0px; left: 30px; text-align: center;
+  font-size: 30px;color: white; padding-top: 30px;line-height: 40px;}
+.f_top h2{  position: absolute; top: 100px; left: -20px;}
+
+/*푸터 메뉴 */
+.footer_menu{ width: 800px; height: 150px; margin: 0 auto; position: absolute; top: 30px; left:20%;}
+.footer_menu > ul{display: flex;  justify-content: space-between ;text-align: left;}
+.footer_menu > ul li a{color: white;  padding: 10px;line-height:40px;}
+.footer_menu > ul > li::first-line{font-size: 18px; font-weight: bold;}
+
+/*패밀리사이트*/
+.family_site{padding: 6px 5px;}
+
+/*푸터 네비*/
+.f_bottom{width: 1200px; margin: 0 auto;color: white; padding: 30px 0px 0px 0;}
+
+.f_bottom nav{text-align: right;}
+.f_bottom nav ul{display:flex; justify-content: right;}
+.f_bottom nav ul li{padding: 0px 10px;}
+.f_bottom nav ul li a{color: white; }
+.f_bottom nav ul li::after{
+    display: block;  content: "";
+    width: 1px; height: 14px;  background-color: white;
+    position:   relative; top:-17px; right: 10px;
+  }
+.f_bottom nav ul li:first-child::after{ display: none;} */
+
+.f_bottom address{width: 1050px;}
+
+.footer_menu > ul > li a:hover{color: var(--color_yellow);}
+.f_bottom nav ul li:hover a{color:var(--color_yellow); }
